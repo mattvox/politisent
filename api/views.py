@@ -9,6 +9,7 @@ from .models import Tweet
 def index(request):
     return render(request, 'api/index.html')
 
+
 def tweets(request):
     data = {'data': [{
         'id': tweet.tweet_id,
