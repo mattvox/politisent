@@ -22,8 +22,8 @@ class Tweet(models.Model):
     formatted_text = models.TextField(default='')
     sentiment_score = models.DecimalField(max_digits=3, decimal_places=2,
                                           default=0)
-    confidence_score = models.DecimalField(max_digits=3, decimal_places=2,
-                                           default=0)
+    # confidence_score = models.DecimalField(max_digits=3, decimal_places=2,
+    #                                        default=0)
 
 
 

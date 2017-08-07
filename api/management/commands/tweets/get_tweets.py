@@ -1,33 +1,8 @@
 import tweepy
 from django.db.utils import IntegrityError
+
 from api.models import Tweet
-
-search_term = 'Trump -filter:retweets'
-tweet_count = 100
-
-# consumer_key = '7bdUIEJDOLveAiWuHK4dxQDqC'
-# consumer_secret = 'wrvb59PcIjOP5kuQlmQYqmU3fo5GIMps3OnCmfT3aNNtKIFaGw'
-# access_token = '1873426352-gvELy2xJU4VKazKnu1v2QgYWknpgovDktkCHDdU'
-# access_token_secret = 'v8oHQs80fDTZbu16AGDOYYZlAyOIIjPo7o6seRme5glnl'
-#
-# auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-# auth.set_access_token(access_token, access_token_secret)
-#
-# api = tweepy.API(auth)
-#
-# tweets = api.search(search_term, count=tweet_count, lang='en',
-#                     show_user=True, tweet_mode='extended')
-
-
-# for tweet in tweets:
-#     if not tweet.truncated:
-#         print(tweet.user.name)
-#         print(tweet.user.screen_name)
-#         print(tweet.user.id)
-#         print(tweet.full_text)
-#         print(tweet.created_at)
-#         print(tweet.id)
-#         print('\n')
+from .get_sentiment import get_sentiment
 
 
 def get_tweets(search_term, tweet_count):
@@ -53,7 +28,8 @@ def get_tweets(search_term, tweet_count):
                 name=tweet.user.name,
                 twitter_name=tweet.user.screen_name,
                 text=tweet.full_text,
-                url='https://twitter.com/' + tweet.user.screen_name + '/status/' + str(tweet.id)
+                url='https://twitter.com/' + tweet.user.screen_name + '/status/' + str(tweet.id),
+                sentiment_score=get_sentiment(tweet.full_text)
             )
 
             formatted_tweet.save()
@@ -62,9 +38,6 @@ def get_tweets(search_term, tweet_count):
         except IntegrityError:
             print('An error occured...')
             pass
-
-
-get_tweets(search_term, tweet_count)
 
 
 # check_status = api.statuses_lookup([893307460731248640])

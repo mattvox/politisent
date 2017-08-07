@@ -1,4 +1,4 @@
-from .get_tweets import get_tweets
+from .tweets.get_tweets import get_tweets
 from django.core.management.base import BaseCommand, CommandError
 
 search_term = 'Trump -filter:retweets'

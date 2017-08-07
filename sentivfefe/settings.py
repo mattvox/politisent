@@ -32,13 +32,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'api.apps.ApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
     'sentiment',
 ]
 
@@ -79,12 +79,14 @@ WSGI_APPLICATION = 'sentivfefe.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'twitter_sentiment',
+        'NAME': 'sentivfefe',
         'USER': 'vox',
         'PASSWORD': 'password',
         'PORT': 5432,
     }
 }
+
+# Celery settings
 
 
 # Password validation

@@ -20,7 +20,6 @@ def tweets(request):
         'text': tweet.text,
         'formatted_text': tweet.formatted_text,
         'sentiment_score': tweet.sentiment_score,
-        'confidence_score': tweet.confidence_score,
     } for tweet in Tweet.objects.all()]}
 
     return JsonResponse(data)
