@@ -1,6 +1,7 @@
 temp
 
 .flake8
+db.sqlite3
 
 notes.txt
 
