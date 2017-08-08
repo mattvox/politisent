@@ -26,10 +26,6 @@ class Tweet(models.Model):
     #                                        default=0)
 
 
-
-
-
-
 # datetime.datetime(2017, 8, 3, 23, 10, 19, 184107, tzinfo=<UTC>)
 
 # 'Tue Jan 24 09:37:52 +0000 2017'
