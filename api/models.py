@@ -1,8 +1,6 @@
 from django.db import models
 from django.core.validators import URLValidator
 
-# Create your models here.
-
 
 class Tweet(models.Model):
     """

@@ -19,7 +19,7 @@ from django.contrib import admin
 from api import views
 
 urlpatterns = [
-    url(r'^$', views.index),
     url(r'^api/', include('api.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^', views.FrontendAppView.as_view()),
 ]
