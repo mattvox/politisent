@@ -8,6 +8,9 @@ notes.txt
 hidden.py
 
 sentivfefe/hidden.py
+/sentivfefe/settings_local.py
+
+/api/management/commands/tweets/tweet_settings.py
 
 celerybeat-schedule
 

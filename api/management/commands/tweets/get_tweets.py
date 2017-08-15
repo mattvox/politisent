@@ -3,13 +3,14 @@ from django.db.utils import IntegrityError
 
 from api.models import Tweet
 from .get_sentiment import get_sentiment
+from .tweet_settings import *
 
 
 def get_tweets(search_term, tweet_count):
-    consumer_key = '7bdUIEJDOLveAiWuHK4dxQDqC'
-    consumer_secret = 'wrvb59PcIjOP5kuQlmQYqmU3fo5GIMps3OnCmfT3aNNtKIFaGw'
-    access_token = '1873426352-gvELy2xJU4VKazKnu1v2QgYWknpgovDktkCHDdU'
-    access_token_secret = 'v8oHQs80fDTZbu16AGDOYYZlAyOIIjPo7o6seRme5glnl'
+    # consumer_key = '7bdUIEJDOLveAiWuHK4dxQDqC'
+    # consumer_secret = 'wrvb59PcIjOP5kuQlmQYqmU3fo5GIMps3OnCmfT3aNNtKIFaGw'
+    # access_token = '1873426352-gvELy2xJU4VKazKnu1v2QgYWknpgovDktkCHDdU'
+    # access_token_secret = 'v8oHQs80fDTZbu16AGDOYYZlAyOIIjPo7o6seRme5glnl'
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)

@@ -17,7 +17,6 @@ class Tweets extends Component {
         <div key={tweet.id}>
           <p>{tweet.text}</p>
         </div>
-        // <div>It works!</div>
       )
     })
   }
@@ -29,7 +28,6 @@ class Tweets extends Component {
       // eslint-disable-next-line
       } else {
         return <div>{this.renderTweets()}</div>;
-        // return <div>this works</div>
       }
     }
 
