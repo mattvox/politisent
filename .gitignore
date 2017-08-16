@@ -1,5 +1,9 @@
 temp
 
+*.pyc
+*.pyo
+*.sock
+
 .flake8
 db.sqlite3
 
@@ -15,3 +19,7 @@ sentivfefe/hidden.py
 celerybeat-schedule
 
 frontend/public
+
+requirements_old.txt
+
+*.sock

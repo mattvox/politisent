@@ -117,6 +117,6 @@ STATIC_URL = '/static/'
 # reset and remove secret key
 
 try:
-    from .settings_local import *
+    from .settings_local import *  # noqa F401, F403
 except ImportError:
     pass
