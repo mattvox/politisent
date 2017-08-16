@@ -23,3 +23,5 @@ frontend/public
 requirements_old.txt
 
 *.sock
+
+static
