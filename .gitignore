@@ -18,6 +18,8 @@ sentivfefe/hidden.py
 
 celerybeat-schedule
 /celerybeat-schedule
+celerybeat-schedule.db
+/celerybeat-schedule.db
 
 frontend/public
 
