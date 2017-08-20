@@ -8,10 +8,10 @@ from .get_sentiment import get_sentiment
 
 
 def get_tweets(search_term, tweet_count):
-    consumer_key = os.environ.get('TWITTER_API_CONSUMER_KEY')
-    consumer_secret = os.environ.get('TWITTER_CONSUMER_SECRET')
-    access_token = os.environ.get('TWITTER_ACCESS_TOKEN')
-    access_token_secret = os.environ.get('TWITTER_ACCESS_SECRET')
+    consumer_key = str(os.environ.get('TWITTER_API_CONSUMER_KEY'))
+    consumer_secret = str(os.environ.get('TWITTER_CONSUMER_SECRET'))
+    access_token = str(os.environ.get('TWITTER_ACCESS_TOKEN'))
+    access_token_secret = str(os.environ.get('TWITTER_ACCESS_SECRET'))
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
