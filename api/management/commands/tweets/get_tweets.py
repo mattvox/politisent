@@ -18,8 +18,7 @@ def get_tweets(search_term, tweet_count):
 
     api = tweepy.API(auth)
 
-    tweets = api.search(search_term, count=tweet_count, lang='en',
-                        show_user=True, tweet_mode='extended')
+    tweets = api.search(search_term, count=tweet_count, lang='en', show_user=True, tweet_mode='extended')
 
     for tweet in tweets:
 
