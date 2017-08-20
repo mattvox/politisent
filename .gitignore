@@ -17,6 +17,7 @@ sentivfefe/hidden.py
 /api/management/commands/tweets/tweet_settings.py
 
 celerybeat-schedule
+/celerybeat-schedule
 
 frontend/public
 

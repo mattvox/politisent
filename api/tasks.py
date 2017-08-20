@@ -1,5 +1,6 @@
+from __future__ import absolute_import, unicode_literals
 import logging
-# from __future__ import absolute_import, unicode_literals
+
 
 from sentivfefe.celery import app
 from api.management.commands import get_tweets
