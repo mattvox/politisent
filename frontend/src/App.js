@@ -24,7 +24,8 @@ import Tweets from './components/tweets';
 
 const App = (props) => (
   <div>
-    <Tweets />
+    {/* <Tweets /> */}
+    App Component
   </div>
 );
 

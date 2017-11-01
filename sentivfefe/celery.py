@@ -18,6 +18,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'fetch_and_process_tweets_each_minute': {
         'task': 'api.tasks.fetch_and_process_tweets',
-        'schedule': crontab(minute='*/3')
+        'schedule': crontab(minute=0, hour='6,9,12,15,18,21')
     },
 }
